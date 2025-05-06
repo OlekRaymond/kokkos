@@ -1,5 +1,7 @@
 [![Kokkos](https://avatars2.githubusercontent.com/u/10199860?s=200&v=4)](https://kokkos.org)
 
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/9344/badge)](https://www.bestpractices.dev/projects/9344)
+
 # Kokkos: Core Libraries
 
 Kokkos Core implements a programming model in C++ for writing performance portable
@@ -30,12 +32,12 @@ To start learning about Kokkos:
 
 The latest release of Kokkos can be obtained from the [GitHub releases page](https://github.com/kokkos/kokkos/releases/latest).
 
-The current release is [4.5.01](https://github.com/kokkos/kokkos/releases/tag/4.5.01).
+The current release is [4.6.01](https://github.com/kokkos/kokkos/releases/tag/4.6.01).
 
 ```bash
-curl -OJ -L https://github.com/kokkos/kokkos/releases/download/4.5.01/kokkos-4.5.01.tar.gz
+curl -OJ -L https://github.com/kokkos/kokkos/releases/download/4.6.01/kokkos-4.6.01.tar.gz
 # Or with wget
-wget https://github.com/kokkos/kokkos/releases/download/4.5.01/kokkos-4.5.01.tar.gz
+wget https://github.com/kokkos/kokkos/releases/download/4.6.01/kokkos-4.6.01.tar.gz
 ```
 
 To clone the latest development version of Kokkos from GitHub:

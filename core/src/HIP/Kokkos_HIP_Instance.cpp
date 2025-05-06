@@ -212,8 +212,8 @@ void HIPInternal::initialize(hipStream_t stream) {
         static_cast<unsigned long *>(constant_mem_void_ptr);
   }
   if (!constantMemReusable[m_hipDev])
-    KOKKOS_IMPL_HIP_SAFE_CALL(
-        hip_event_create_wrapper(&constantMemReusable[m_hipDev]));
+    KOKKOS_IMPL_HIP_SAFE_CALL(hip_event_create_with_flags_wrapper(
+        &constantMemReusable[m_hipDev], hipEventDisableTiming));
 
   //----------------------------------
   // Multiblock reduction uses scratch flags for counters
@@ -407,6 +407,7 @@ void HIPInternal::finalize() {
   KOKKOS_IMPL_HIP_SAFE_CALL(hip_free_wrapper(m_scratch_locks));
   m_scratch_locks     = nullptr;
   m_num_scratch_locks = 0;
+  m_hipDev            = -1;
 }
 
 int HIPInternal::m_maxThreadsPerSM = 0;
